@@ -1,0 +1,37 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  .loader {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .dot {
+    width: 35px;
+    height: 35px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+  }
+  
+  .dot1 { animation-delay: 0.1s; }
+  .dot2 { animation-delay: 0.3s; }
+  .dot3 { animation-delay: 0.5s; }
+  .dot4 { animation-delay: 0.7s; }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
