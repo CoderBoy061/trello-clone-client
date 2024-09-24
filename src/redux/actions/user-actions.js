@@ -38,6 +38,7 @@ export const getUserInfo = () => async (dispatch) => {
       type: GET_USER,
     });
     const { data } = await axios.get(getUserInfoUrl, {
+      credentials:"include",
       withCredentials: true,
     });
 
@@ -151,6 +152,7 @@ export const registerUserViaGoogle = (code) => async (dispatch) => {
       },
       {
         withCredentials: true,
+        credentials:"include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -188,6 +190,7 @@ export const loginUserViaGoogle = (code) => async (dispatch) => {
         code,
       },
       {
+        credentials:"include",
         withCredentials: true,
         headers: {
           "Content-Type": "application/json",
@@ -220,6 +223,7 @@ export const logoutUser = () => async (dispatch) => {
       type: LOGOUT,
     });
     const { data } = await axios.post(logoutUserUrl, null, {
+      credentials:"include",
       withCredentials: true,
     });
     if (data.success === true) {
